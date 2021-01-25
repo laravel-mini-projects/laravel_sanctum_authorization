@@ -13,6 +13,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
+Route::group(['middleware' => 'auth:sanctum'], function() {
     return view('welcome');
 });
