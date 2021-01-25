@@ -16,3 +16,5 @@ use Illuminate\Support\Facades\Route;
 Route::group(['middleware' => 'auth:sanctum'], function() {
     return view('welcome');
 });
+
+Route::post("login",[UserController::class,'index']);
